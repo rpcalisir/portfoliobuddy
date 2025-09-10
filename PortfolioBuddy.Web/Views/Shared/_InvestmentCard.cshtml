@@ -1,0 +1,30 @@
+﻿@model PortfolioBuddy.Web.ViewModels.InvestmentCardViewModel
+
+<div class="col-md-4 mb-3" data-inv-id="@Model.Investment.Id">
+    <div class="card h-100">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <strong>@Model.Investment.Name</strong>
+            <small class="latest-date text-muted">@Model.LatestDateText</small>
+        </div>
+        <div class="card-body">
+            <p>
+                <strong>Latest:</strong>
+                <span class="latest-value">@Model.LatestValueText</span>
+            </p>
+
+            <div class="mb-2">
+                <label class="form-label">Amount</label>
+                <input class="form-control amount" type="number" step="0.0001" placeholder="e.g., 103.82">
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Unit</label>
+                <input class="form-control unit" type="text" value="GR" placeholder="GR / EUR / CHF">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Value in TL</label>
+                <input class="form-control value-tl" type="number" step="0.01" placeholder="e.g., 349000">
+            </div>
+            <button class="btn btn-success save-detail w-100">Save</button>
+        </div>
+    </div>
+</div>
